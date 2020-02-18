@@ -4,8 +4,24 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Are you ready for quiz?");
-        String word = scan.nextLine();
+        String answer;
+        boolean yn;
+
+        System.out.println("Are you ready for quiz? (yes/no)");
+        while (true) {
+            answer = scan.nextLine().trim().toLowerCase();
+            if (answer.equals("yes")){
+                yn = true;
+                break;
+            }else if (answer.equals("no")){
+                System.out.println("Ok, we wait before you will be ready");
+            }else {
+                System.out.println("Sorry, I didn't catch that. Please answer yes/no");
+            }
+        }
+
+
+
 
         System.out.println("Okay, here it comes!");
         System.out.println("                     ");
